@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
-import { Smartphone, Download, ShieldCheck, CheckCircle2, Bot, Briefcase, Landmark, HelpCircle, ArrowRight, ExternalLink, Zap, Users, Heart, Award, FileText, Check, ChevronRight } from 'lucide-react';
+import { Smartphone, Download, ShieldCheck, CheckCircle2, Bot, Briefcase, Landmark, HelpCircle, ArrowRight, ExternalLink, Zap, Users, Heart, Award, FileText, Check, ChevronRight, QrCode, X, Monitor, Share2 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 
 export const WebDownloadPortal: React.FC = () => {
   const { setViewMode, setActiveTab, setActiveCategory, setIsEligibilityOpen } = useApp();
   const [downloadStarted, setDownloadStarted] = useState(false);
+  const [showQrModal, setShowQrModal] = useState(false);
   const [activeNav, setActiveNav] = useState<'Home' | 'About' | 'Features' | 'Why Us' | 'Contact'>('Home');
+
+  const apkUrl = '/downloads/SchemeSathi-v1.0.0.apk';
+  const liveApkFullUrl = 'https://schemesathi-ten.vercel.app/downloads/SchemeSathi-v1.0.0.apk';
 
   const handleDownload = () => {
     setDownloadStarted(true);
     const link = document.createElement('a');
-    link.href = '/downloads/SchemeSathi-v1.0.0.apk';
-    link.download = 'SchemeSathi-v1.0.0.apk';
+    link.href = apkUrl;
+    link.setAttribute('download', 'SchemeSathi-v1.0.0.apk');
+    link.setAttribute('type', 'application/vnd.android.package-archive');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -32,10 +37,8 @@ export const WebDownloadPortal: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4">
           {/* Logo & Tagline */}
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-[#E8F5EE] flex items-center justify-center shadow-xs border border-emerald-200">
-              <svg className="w-7 h-7 text-[#0B7B4B]" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-              </svg>
+            <div className="w-11 h-11 rounded-2xl bg-white flex items-center justify-center shadow-xs border border-emerald-200 overflow-hidden">
+              <img src="/logo.png" alt="SchemeSathi Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <div className="flex items-center gap-2">
@@ -117,10 +120,8 @@ export const WebDownloadPortal: React.FC = () => {
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* App Icon Card */}
             <div className="inline-flex items-center gap-3.5 p-3 rounded-2xl bg-white shadow-md border border-emerald-100">
-              <div className="w-14 h-14 rounded-2xl bg-[#E8F5EE] flex items-center justify-center shrink-0 border border-emerald-200 shadow-inner">
-                <svg className="w-9 h-9 text-[#0B7B4B]" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                </svg>
+              <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shrink-0 border border-emerald-200 shadow-inner overflow-hidden">
+                <img src="/logo.png" alt="SchemeSathi Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h2 className="text-2xl font-black text-[#0B7B4B] leading-none">SchemeSathi</h2>
@@ -218,10 +219,8 @@ export const WebDownloadPortal: React.FC = () => {
                 {/* Header inside phone */}
                 <div className="flex items-center justify-between pb-1.5 border-b border-slate-100">
                   <div className="flex items-center gap-1.5">
-                    <div className="w-6 h-6 rounded-lg bg-[#E8F5EE] flex items-center justify-center text-[#0B7B4B]">
-                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/>
-                      </svg>
+                    <div className="w-6 h-6 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-emerald-200">
+                      <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
                     </div>
                     <div>
                       <p className="font-bold text-xs text-[#0B7B4B] leading-none">SchemeSathi</p>
