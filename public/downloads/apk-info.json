@@ -1,8 +1,14 @@
 {
   "version": "1.0.0",
-  "file_name": "SchemeSathi-v1.0.0.apk",
-  "size_mb": 0.52,
-  "sha256": "36603ded3493e1265040d9766bade5c13dd3088f867a85f53abd70b0d399df08",
-  "built_at": "2026-11-04T14:28:34.201660",
-  "download_url": "/downloads/SchemeSathi-v1.0.0.apk"
+  "build": 1,
+  "releaseDate": "2026-11-04",
+  "fileName": "SchemeSathi-v1.0.0.apk",
+  "fileSize": 4531224,
+  "formattedSize": "4.32 MB",
+  "minAndroidVersion": "Android 8.0 (Oreo / API 26)",
+  "targetAndroidVersion": "Android 14 (UpsideDownCake / API 34)",
+  "package": "com.schemesathi.app",
+  "sha256": "FC488714337D9732E22938AD8A3FD596E51610329778F51F9931ED7FA9B3DA19",
+  "buildType": "Compiled Android Debug APK (classes.dex bytecode, AAPT2 compiled resources)",
+  "downloadUrl": "/downloads/SchemeSathi-v1.0.0.apk"
 }
