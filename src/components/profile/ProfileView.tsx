@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Globe, Bell, Shield, HelpCircle, Info, LogOut, Moon, Sun, ChevronRight, Lock, Check } from 'lucide-react';
+import { User, Globe, Bell, Shield, HelpCircle, Info, LogOut, Moon, Sun, ChevronRight, Lock, Check, X } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { SupportedLanguage } from '../../data/translations';
 import { INDIAN_STATES_AND_UT } from '../../data/administrations';
@@ -246,11 +246,3 @@ export const ProfileView: React.FC = () => {
     </div>
   );
 };
-
-function X(props: { className?: string }) {
-  return (
-    <svg className={props.className || 'w-4 h-4'} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  );
-}
