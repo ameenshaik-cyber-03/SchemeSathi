@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS public.user_profiles (
     district VARCHAR(100),
     age INT CHECK (age >= 0 AND age <= 125),
     gender VARCHAR(50),
-    occupation VARCHAR(100),
+    occupation VARCHAR(100), 
     education VARCHAR(100),
     income_bracket VARCHAR(100),
     preferred_language VARCHAR(10) DEFAULT 'en',
