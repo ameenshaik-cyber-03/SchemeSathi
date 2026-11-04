@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Notification of National Apprenticeship Promotion Scheme 2.0",
+    "department": "Ministry of Skill Development and Entrepreneurship",
+    "source": "https://msde.gov.in/notifications/naps-2026.pdf",
+    "hash": "2143454f1f33a39760a03b415d58966b0227ce359eff73a7b57a8eb756ca7a37",
+    "confidence": "99%",
+    "status": "Auto-Published",
+    "ingested_at": "04 Nov 2026, 01:17 PM"
+  },
+  {
+    "title": "PM Vishwakarma Toolkit Incentive Disbursal 2026",
+    "department": "Ministry of Micro, Small and Medium Enterprises",
+    "source": "https://pmvishwakarma.gov.in/circulars/toolkit.pdf",
+    "hash": "543ad70975809ac2b3d7ca14d43576c5610e93f0c5be218efb6a07cb2f015497",
+    "confidence": "99%",
+    "status": "Auto-Published",
+    "ingested_at": "04 Nov 2026, 01:17 PM"
+  }
+]
